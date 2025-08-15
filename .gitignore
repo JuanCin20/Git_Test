@@ -1,0 +1,118 @@
+# ? Let's Ignore "credentials" File
+credentials.txt
+# TODO: <!---->
+# * git config --global user.name "JuanCin20"
+# * git config --global user.email "JuanCin080604gmail.com"
+# TODO: <!---->
+# * git config --list
+# * git config --global --list
+# * git config --local --list
+# * git config --system --list
+# TODO: <!---->
+# ? CTRL + R (Search a Previous Command)
+# ? ALT + 126 (~)
+# ? ALT + 92 (\)
+# TODO: <!---->
+# * clear (Clean the Terminal)
+# TODO: <!---->
+# ? git config --global core.editor "code --wait"
+# ? git config --global color.ui true
+# ! git config --global --unset ... (Remove Wrong Configuration Statement)
+# ? git config --global core.abbrev 5
+# ! git config --global core.excludesfile C:/Users/JuanCin20/Documents/.gitignore_global
+# ? git config --global alias.optimizedlog "log --oneline --all --graph --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr'"
+# ? git config --global core.autocrlf true (Windows)
+# ? git config --global core.autocrlf input (Linux)
+# TODO: <!---->
+# * File (Windows)
+# * Directory (Mac or Linux)
+# TODO: <!---->
+# * cd c: (Change Directory)
+# ? cd Downloads // cd "John Folder" // cd John\ Folder (Change Directory)
+# ? cd ../ // cd .. (Return to a Previous Directory)
+# * mkdir Git_Course (Create a new Folder with Name "Git_Course")
+# * rmdir Git_Course (Delete a Folder with Name "Git_Course")
+# * touch index.php (Create a File with Name "index" in the Current Folder)
+# * rm index.php (Remove a File with Name "index" in the Current Folder)
+# ? ls // ls -a // ls -la (List Files from the Current Folder or Ubication)
+# * pwd (Print in Console the Current Route Location)
+# TODO: <!---->
+# ? git init // git init . (Initialize a Local Repository in the Current Location)
+# * git add . (Add all Files from Current Location to the Staging Area)
+# * git add index.php (Add File with Name "index" to the Staging Area)
+# * git add index.php controller.php (You can Also add Multiple Files on a Single Line)
+# ? git status // git status -s // git status --short (See the Current Changes on the Local Repository)
+# * git rm --cached index.php (Stop Tracking the File with Name "index")
+# * git rm --cached index.php controller.php (You can Also Untrack Multiple Files on a Single Line)
+# TODO: <!---->
+# * git commit (Upload Files to the Local Repository, but Visual Studio Code will be Open to Write the Message)
+# * git commit -a (Upload Files Directly to the Local Repository, but Visual Studio Code will be Open to Write the Message)
+# * git commit -m "Commit_01" (Upload Files to the Local Repository)
+# * git commit -a -m "Commit_01" (Upload Files Directly to the Local Repository)
+# TODO: <!---->
+# ! Área de Trabajo (Workspace Area) - Área de Preparación (Staging Area) - Repositorio (Repository)
+# TODO: <!---->
+# ? git log // git log --oneline (View the Commit History of the Repository)
+# ? git log --oneline --all (View the Commit History from all Branches of the Repository)
+# ? git log --oneline --all --graph --pretty=format:"%C(auto)%h%d %s %C(black)%C(bold)%cr" (Get a More Detailed View of the Commit History of the Repository)
+# ? git restore --staged index.php // git reset HEAD -- index.php (Remove File with Name "index" from the Staging Area, Keeping the Current Changes of the File)
+# ? git restore index.php // git checkout index.php (Restore the file at Workspace Level)
+# ? git reset --hard // git reset --hard HEAD (Discard all Uncommitted Changes in Both the Staging Area and the Workspace Level)
+# TODO: <!---->
+# * git mv index.php main.php (Rename File with Name "index" to "main")
+# * git show index.php (View Changes and Content of the File "index" from the Last Commit)
+# * git diff --staged (See Files's Changes at Staging Area)
+# * git diff f2e9a 0e1f8 (View Files's Changes Between two Commits)
+# * git diff --name-only f2e9a 0e1f8
+# * git diff --word-diff f2e9a 0e1f8
+# * git commit --amend (Rename Last Commit, but Visual Studio Code will be Open to Write the Message)
+# * git commit --amend -m "Commit_06" (Rename Last Commit to "Commit_06")
+# TODO: <!---->
+# ? git rebase -i HEAD~1 // git rebase -i HEAD~ (On "pick 4edcd Commit_06" Write "edit" on "pick")
+# * git commit --amend -m "Commit_06_Edited"
+# * git rebase --continue
+# TODO: <!---->
+# ? git reset --soft HEAD~1 // git reset --soft HEAD~
+# ? git reset --mixed HEAD~1 // git reset --mixed HEAD~
+# ? git reset --hard HEAD~1 // git reset --hard HEAD~
+# * git reset --soft 4edcd
+# * git reset --mixed 4edcd
+# * git reset --hard 4edcd
+# TODO: <!---->
+# * git branch (See Branches)
+# * git branch user_branch (Create "user_branch" Branch)
+# ? git checkout user_branch // git switch user_branch (Go to "user_branch" Branch)
+# ? git checkout -b user_branch // git switch -c user_branch (Create "user_branch" Branch and go to That Branch Created)
+# * git branch -d user_branch (Delete "user_branch" Branch)
+# * git branch -m user_branch product_branch (Rename "user_branch" Branch to "product_branch")
+# * git branch -m user_branch (Rename Current Branch to "user_branch")
+# TODO: <!---->
+# * git merge user_branch (We are now on "master" Branch)
+# TODO: <!---->
+# * git merge --continue (Use it on Merge Conflicts, but Visual Studio Code will be Open to Write the Message)
+# TODO: <!---->
+# ? git ls-tree -r --name-only HEAD~1 // git ls-tree -r --name-only HEAD~
+# TODO: <!---->
+# * git reflog
+# * git checkout abd46
+# * git switch -c restored_branch
+# TODO: <!---->
+# * git remote -v (View Remote Repositories Connected to Local Repository)
+# TODO: <!---->
+# ! Adding the README file
+# * git remote add origin https://github.com/JuanCin20/Git_Test.git ("origin" can be Anything)
+# * git branch -M main
+# * git pull --rebase origin main
+# ? git push -u origin main // git push --set-upstream origin main (From now on Just Write Write "git push")
+# TODO: <!---->
+# ! Not Adding the README file
+# * git remote add origin https://github.com/JuanCin20/Git_Test.git ("origin" can be Anything)
+# * git branch -M main
+# ? git push -u origin main // git push --set-upstream origin main (From now on Just Write Write "git push")
+# TODO: <!---->
+# * git clone https://github.com/JuanCin20/Git_Test.git (It's Equivalent to "git remote add origin ...")
+# TODO: <!---->
+# ? git pull origin main // git pull
+# TODO: <!---->
+# * git fetch
+# * git switch --detach origin/main
