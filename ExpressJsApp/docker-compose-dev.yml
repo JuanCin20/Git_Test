@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  expressjsapp_container:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    links:
+      - mongo_container
+    volumes:
+      - .:/home/app
+      - /home/app/node_modules
+    command: npm run dev
+  mongo_container:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=U22208295
+      - MONGO_INITDB_ROOT_PASSWORD=JUANCIn080604
+    volumes:
+      - mongo-data:/data/db
+      # mysql-data:/var/lib/mysql
+      # postgresql-data:/var/lib/postgresql/data
+volumes:
+  mongo-data:
