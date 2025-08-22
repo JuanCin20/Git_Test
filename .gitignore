@@ -116,3 +116,26 @@ credentials.txt
 # TODO: <!---->
 # * git fetch
 # * git switch --detach origin/main
+# TODO: <!---->
+# * docker images
+# * docker pull ...
+# * docker image rm ...
+# ? docker ps // docker ps -a
+# ? docker create ... // docker container create ...
+# * docker create --name mongo_container ...
+# ? docker create -p27017:27017 --name mongo_container ... // docker create -p27017 --name mongo_container ...
+# ? docker logs mongo_container // docker logs --follow mongo_container
+# * docker start mongo_container
+# * docker stop mongo_container
+# * docker rm mongo_container
+# ? docker run ... // docker run -d ...
+# * docker run --name mongo_container -p27017:27017 -d ...
+# * docker create -p27017:27017 --name mongo_container -e MONGO_INITDB_ROOT_USERNAME=U22208295 -e MONGO_INITDB_ROOT_PASSWORD=JUANCIn080604 ...
+# * docker network ls
+# * docker network create network_01
+# * docker network rm network_01
+# * docker build -t myexpressapp:1 .
+# * docker create -p27017:27017 --name mongo_container --network network_01 -e MONGO_INITDB_ROOT_USERNAME=U22208295 -e MONGO_INITDB_ROOT_PASSWORD=JUANCIn080604 mongo
+# * docker create -p3000:3000 --name myexpressapp_container --network network_01 myexpressapp:1
+# * docker compose up
+# * docker compose down

@@ -1,7 +1,7 @@
-
-// import java.util.Scanner;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+// ? import java.util.Scanner;
+// ? import java.text.SimpleDateFormat;
+// ? import java.util.Date;
+// ? import java.util.function.Function;
 
 public class Recursion {
 
@@ -122,6 +122,47 @@ public class Recursion {
         }
     }
 
+    public static long Function_10(long number) {
+        if (number == 1L) {
+            return 1L;
+        } else {
+            return number + Function_10(number - 1L);
+        }
+    }
+
+    public static long Function_11(long number) {
+        if (number == 0L) {
+            return 1L;
+        } else {
+            return number * Function_11(number - 1);
+        }
+    }
+
+    public static void Function_12(int begin, int end) {
+        if (begin == end) {
+            System.out.print(arrayNumber[end] + "\n");
+        } else {
+            System.out.print(arrayNumber[begin] + ", ");
+            Function_12(begin + 1, end);
+        }
+    }
+
+    public static boolean Function_13(int number, int begin, int end) {
+        if (begin == end) {
+            return arrayNumber[begin] == number ? true : false;
+        } else {
+            return arrayNumber[begin] == number ? true : Function_13(number, begin + 1, end);
+        }
+    }
+
+    public static int biDimensionalArray[][] = {
+            { 1, 2, 3, 4 },
+            { 5, 6, 7, 8 }
+    };
+
+    public static void Funcition_14(int begin, int end) {
+    }
+
     public static String getMensaje(String[] palabras) {
         StringBuffer mensaje = new StringBuffer();
         for (int i = 0; i < palabras.length; i++) {
@@ -132,6 +173,24 @@ public class Recursion {
     }
 
     public static void main(String[] args) {
+        System.out.println("Result: " + Function_10(6));
+        System.out.println("Result: " + Function_11(6));
+        System.out.print("Result: ");
+        Function_12(0, arrayNumber.length - 1);
+        System.out.println("Result: " + Function_13(10, 0, arrayNumber.length - 1));
+
+        System.out.println("Length: " + biDimensionalArray.length);
+        System.out.println("[0]: " + biDimensionalArray[0]);
+        System.out.println("[1]: " + biDimensionalArray[1]);
+        System.out.println("Length[0]: " + biDimensionalArray[0].length);
+        System.out.println("Length[1]: " + biDimensionalArray[1].length);
+
+        for (int i = 0; i <= biDimensionalArray.length - 1; i++) {
+            for (int j = 0; j <= biDimensionalArray[i].length - 1; j++) {
+                System.out.print(biDimensionalArray[i][j] + "\t");
+            }
+            System.out.print("\n");
+        }
         // long numberfactorial = Function_00(5L);
         // String numberInverted = Function_01(9876543210L);
         // long numberSum = Function_02(20L);
@@ -275,10 +334,12 @@ public class Recursion {
          * System.out.println("result: " + result);
          */
 
-        Date date = new Date();
-        System.out.println("date: " + date.toString());
-        String dateFormat = "hh:mm:ss dd-MM-yyyy";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
-        System.out.println(simpleDateFormat.format(date));
+        /*
+         * Date date = new Date();
+         * System.out.println("date: " + date.toString());
+         * String dateFormat = "hh:mm:ss dd-MM-yyyy";
+         * SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
+         * System.out.println(simpleDateFormat.format(date));
+         */
     }
 }
