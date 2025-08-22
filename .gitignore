@@ -1,5 +1,5 @@
 # ? Let's Ignore "credentials" File
-credentials.txt
+Extras/credentials.txt
 # TODO: <!---->
 # * git config --global user.name "JuanCin20"
 # * git config --global user.email "JuanCin080604gmail.com"
@@ -117,6 +117,7 @@ credentials.txt
 # * git fetch
 # * git switch --detach origin/main
 # TODO: <!---->
+# * npm init -y
 # * docker images
 # * docker pull ...
 # * docker image rm ...
@@ -139,3 +140,4 @@ credentials.txt
 # * docker create -p3000:3000 --name myexpressapp_container --network network_01 myexpressapp:1
 # * docker compose up
 # * docker compose down
+# * docker compose -f docker-compose-dev.yml up
