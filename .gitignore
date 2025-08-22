@@ -135,9 +135,9 @@ Extras/credentials.txt
 # * docker network ls
 # * docker network create network_01
 # * docker network rm network_01
-# * docker build -t myexpressapp:1 .
-# * docker create -p27017:27017 --name mongo_container --network network_01 -e MONGO_INITDB_ROOT_USERNAME=U22208295 -e MONGO_INITDB_ROOT_PASSWORD=JUANCIn080604 mongo
-# * docker create -p3000:3000 --name myexpressapp_container --network network_01 myexpressapp:1
-# * docker compose up
-# * docker compose down
-# * docker compose -f docker-compose-dev.yml up
+# ? docker build -t expressjsapp:1 . // docker-compose build // docker build -f Dockerfile.dev -t expressjsapp:1 .
+# * docker create -p27017:27017 --name mongo_container --network network_01 -e MONGO_INITDB_ROOT_USERNAME=U22208295 -e MONGO_INITDB_ROOT_PASSWORD=JUANCIn080604 ...
+# * docker create -p3000:3000 --name expressjsapp_container --network network_01 expressjsapp:1
+# TODO: <!---->
+# ? docker compose up // docker compose -f docker-compose-dev.yml up
+# ? docker compose down // docker compose -f docker-compose-dev.yml down
