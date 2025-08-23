@@ -1,5 +1,6 @@
 # ? Let's Ignore "credentials" File
 Extras/credentials.txt
+ExpressJsApp/node_modules/
 # TODO: <!---->
 # * git config --global user.name "JuanCin20"
 # * git config --global user.email "JuanCin080604gmail.com"
@@ -117,7 +118,35 @@ Extras/credentials.txt
 # * git fetch
 # * git switch --detach origin/main
 # TODO: <!---->
-# * npm init -y
+# * npm init (Create a package.json File)
+# * npm init -y // npm init --yes (Create a package.json File with Default Values)
+# ? npm root -g // npm root --global (Show Global Packages Location)
+# ? npm root // npm root --local (Show Local Packages Location)
+# ? npm list -g --depth=0 // npm list --global --depth=0 (Show Global Packages Installed)
+# ? npm list --depth=0 // npm list --local --depth=0 (Show Local Packages Installed)
+# ? npm install // npm install --save (Install all Dependencies and Development Dependencies Listed in the package.json File)
+# ? npm install ... // npm install ... --save (Install a Package and Save it in the package.json File and package-lock.json File)
+# * npm install ... --save-dev (Install a Package and Save it in the package.json File and package-lock.json File as a Development Dependency)
+# * npm update ... --save (Update a Package to the Latest Version and Update it in the package.json File and package-lock.json File)
+# * npm update ... --save-dev (Update a Package to the Latest Version and Update it in the package.json File and package-lock.json File as a Development Dependency)
+# * npm uninstall ... --save (Uninstall a Package and Remove it from the package.json File and package-lock.json File)
+# * npm uninstall ... --save-dev (Uninstall a Package and Remove it from the package.json File and package-lock.json File as a Development Dependency)
+# ? npm install -g ... // npm install --global ... (Same as "npm install ... --save", but Install the Package Globally)
+# ? npm update -g ... // npm update --global ... (Same as "npm update ... --save", but Update the Package Globally)
+# ? npm uninstall -g ... // npm uninstall --global ... (Same as "npm uninstall ... --save", but Uninstall the Package Globally)
+# ? npm run // npm run -- (View all Scripts Defined in the package.json File)
+# ? npm run ... // npm run ... -- (Run any Script Defined in the package.json File)
+# * npm run start (Executes the script "start" defined in package.json)
+# * npm run dev (Executes the script "dev" defined in package.json)
+# * npm run test (Executes the script "test" defined in package.json)
+# * npm run build (Build the Application for Production)
+# * npm run lint (Lint the Source Code to Find and Fix Problems According to the Defined Rules)
+# * npm run format (Format the Source Code According to the Defined Style Rules)
+# * npm run serve (Starts a Local Development Server to Preview the Application)
+# * npm run watch (Watches for File Changes and Automatically Rebuilds or Restarts the Application)
+# * npm run clean (Remove Generated Files or Folders)
+# * npm run deploy (Deploy the Application to a Specified Environment)
+# TODO: <!---->
 # * docker images
 # * docker pull ...
 # * docker image rm ...

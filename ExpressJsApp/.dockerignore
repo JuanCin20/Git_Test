@@ -1,0 +1,25 @@
+# Ignore Local Dependencies
+node_modules/
+
+# Ignore Npm Logs
+yarn-error.log
+npm-debug.log
+
+# Ignore Environment Files
+.env
+
+# Ignore Docker Configuration Files
+Dockerfile*
+docker-compose*.yml
+
+# Ignore Control Versions Files
+.git
+.gitignore
+
+# Ignora Operating System Files
+.DS_Store
+Thumbs.db
+
+# Other Temporary Files
+*.swp
+*.swo

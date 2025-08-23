@@ -1,16 +1,17 @@
 FROM node:18
 
-RUN npm install -g express
-RUN npm install -g mongoose
-RUN npm install -g nodemon
-
 WORKDIR /home/app
 
 # Copy the Files of Configuration
 COPY package*.json /home/app
 
-# Install the Dependencies
-RUN npm install
+RUN npm cache clean --force
+RUN rm -rf node_modules package-lock.json
+
+# RUN npm install express --save
+# RUN npm install mongoose --save
+# RUN npm install nodemon --save
+RUN npm install --save
 
 # Copy the Rest of the Code
 COPY . /home/app

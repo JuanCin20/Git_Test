@@ -1,10 +1,10 @@
 {
   "name": "expressjsapp",
   "version": "1.0.0",
-  "main": "index.cjs",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon -L index.cjs"
+    "start": "node index.js",
+    "dev": "nodemon -L index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +12,9 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
-    "mongoose": "^8.17.2"
+    "mongoose": "^8.18.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.10"
   }
 }

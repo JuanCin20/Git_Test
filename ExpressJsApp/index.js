@@ -16,14 +16,15 @@ mongoose.connect(
 );
 
 app.get("/", async (request, responsive) => {
-  console.log("Http - GET Request - Hellow World!");
+  console.log("Http - GET Request");
   const animals = await animal.find();
   return responsive.send(animals);
 });
+
 app.get("/create", async (request, responsive) => {
   console.log("Http - POST Request");
   await animal.create({ kind: "Dog", state: "Alive" });
-  return responsive.send("Ok!");
+  return responsive.send("Http - POST Request");
 });
 
 app.listen(3000, () => console.log("http://localhost:3000"));
