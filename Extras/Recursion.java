@@ -172,25 +172,117 @@ public class Recursion {
         return mensaje.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println("Result: " + Function_10(6));
-        System.out.println("Result: " + Function_11(6));
-        System.out.print("Result: ");
-        Function_12(0, arrayNumber.length - 1);
-        System.out.println("Result: " + Function_13(10, 0, arrayNumber.length - 1));
+    public static void Challenge_00() {
+        System.out.println("*             ");
+        System.out.println("* *           ");
+        System.out.println("* * *         ");
+        System.out.println("* * * *       ");
+        System.out.println("* * * * *     ");
+        System.out.println("* * * * * *   ");
+        System.out.println("* * * * * * * ");
+    }
 
-        System.out.println("Length: " + biDimensionalArray.length);
-        System.out.println("[0]: " + biDimensionalArray[0]);
-        System.out.println("[1]: " + biDimensionalArray[1]);
-        System.out.println("Length[0]: " + biDimensionalArray[0].length);
-        System.out.println("Length[1]: " + biDimensionalArray[1].length);
-
-        for (int i = 0; i <= biDimensionalArray.length - 1; i++) {
-            for (int j = 0; j <= biDimensionalArray[i].length - 1; j++) {
-                System.out.print(biDimensionalArray[i][j] + "\t");
+    public static void Challenge_01(int rowNumber) {
+        for (int i = 1; i <= rowNumber; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
             }
             System.out.print("\n");
         }
+    }
+
+    public static void Challenge_02(int rowNumber) {
+        for (int i = rowNumber; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    public static void Challenge_03() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                System.out.println("number: fizz");
+            } else {
+                if (i % 5 == 0) {
+                    System.out.println("number: buzz");
+                } else {
+                    if (i % 3 == 0 && i % 5 == 0) {
+                        System.out.println("number: fizzbuzz");
+                    } else {
+                        System.out.println("number: " + i);
+                    }
+                }
+            }
+        }
+    }
+
+    public static boolean Challenge_04(String word01, String word02) {
+        if (word01.equalsIgnoreCase(word02)) {
+            return false;
+        } else {
+            String sortedWord01 = Challenge_05(word01);
+            String sortedWord02 = Challenge_05(word02);
+            if (sortedWord01.equals(sortedWord02)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    public static String Challenge_05(String word) {
+        char[] character = new char[word.length()];
+        String wordLowerCase = word.toLowerCase();
+        for (int i = 0; i < wordLowerCase.length(); i++) {
+            character[i] = wordLowerCase.charAt(i);
+        }
+
+        int characterArrayLength = character.length;
+        for (int i = 0; i < characterArrayLength - 1; i++) {
+            for (int j = 0; j < characterArrayLength - i - 1; j++) {
+                if (character[j] > character[j + 1]) {
+                    char temp = character[j];
+                    character[j] = character[j + 1];
+                    character[j + 1] = temp;
+                }
+            }
+        }
+
+        String sortedWord = new String(character);
+        return sortedWord;
+    }
+
+    public static void main(String[] args) {
+        /*
+         * System.out.println("Result: " + Function_10(6));
+         * System.out.println("Result: " + Function_11(6));
+         * System.out.print("Result: ");
+         * Function_12(0, arrayNumber.length - 1);
+         * System.out.println("Result: " + Function_13(10, 0, arrayNumber.length - 1));
+         * 
+         * System.out.println("Length: " + biDimensionalArray.length);
+         * System.out.println("[0]: " + biDimensionalArray[0]);
+         * System.out.println("[1]: " + biDimensionalArray[1]);
+         * System.out.println("Length[0]: " + biDimensionalArray[0].length);
+         * System.out.println("Length[1]: " + biDimensionalArray[1].length);
+         * 
+         * for (int i = 0; i <= biDimensionalArray.length - 1; i++) {
+         * for (int j = 0; j <= biDimensionalArray[i].length - 1; j++) {
+         * System.out.print(biDimensionalArray[i][j] + "\t");
+         * }
+         * System.out.print("\n");
+         * }
+         */
+        // Challenge_00();
+        // Challenge_01(10);
+        // Challenge_02(10);
+        // Challenge_03();
+        boolean result = Challenge_04("Listen", "Silent");
+        System.out.println("result: " + result);
+        String sortedWord = Challenge_05("Ayacucho");
+        System.out.println("sortedWord: " + sortedWord);
         // long numberfactorial = Function_00(5L);
         // String numberInverted = Function_01(9876543210L);
         // long numberSum = Function_02(20L);
