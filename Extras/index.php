@@ -27,3 +27,13 @@ $inputArray = [64, 34, 25, 12, 22, 11, 90];
 $sortedArray = bubbleSort($inputArray);
 
 echo ("Sorted Array: " . implode(", ", $sortedArray)) . "\n";
+function additionFunction(int $number01, int $number02): int
+{
+    return $number01 + $number02;
+}
+
+$result = additionFunction(5, 5);
+echo ("Result: " . $result);
+// ? Comment_01
+// ? Comment_02
+// ? Comment_03
