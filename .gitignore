@@ -1,6 +1,7 @@
 # ? Let's Ignore "credentials" File
 Extras/credentials.txt
 ExpressJsApp/node_modules/
+.vscode/
 # TODO: <!---->
 # * git config --global user.name "JuanCin20"
 # * git config --global user.email "JuanCin080604gmail.com"
